@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -177,6 +177,7 @@ TrailRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -303,6 +304,7 @@ TrailRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -447,6 +449,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -476,13 +479,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 409229919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 516c33a5299798d418f550c7a6293f83, type: 3}
+  m_Script: {fileID: 11500000, guid: 407ac5972f35f9041b0c5f083d3de468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  characterName: Pob
-  color: {r: 0.98039216, g: 0.1529412, b: 0.2332285, a: 1}
-  material: {fileID: 2100000, guid: ae1cf6cc177952f41b63cb3a353956a4, type: 2}
+  characterName: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  material: {fileID: 0}
   attackedCharacters: []
   startAreaPoints: 45
   startAreaRadius: 3
@@ -496,7 +499,6 @@ MonoBehaviour:
   trail: {fileID: 0}
   trailCollidersHolder: {fileID: 0}
   trailColls: []
-  positionsTillReturning: 2
 --- !u!4 &409229925
 Transform:
   m_ObjectHideFlags: 0
@@ -660,6 +662,7 @@ TrailRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -769,7 +772,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 727081337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d9fb2fa7fa5e9048ad4d0e06a5c0ae7, type: 3}
+  m_Script: {fileID: 11500000, guid: e6dd70a5556af084db4e19d9bad0054d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mm: {fileID: 0}
@@ -848,6 +851,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -877,13 +881,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 735162570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 516c33a5299798d418f550c7a6293f83, type: 3}
+  m_Script: {fileID: 11500000, guid: 407ac5972f35f9041b0c5f083d3de468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  characterName: Nob
-  color: {r: 0.22142476, g: 0.98039216, b: 0.1529412, a: 1}
-  material: {fileID: 2100000, guid: ae1cf6cc177952f41b63cb3a353956a4, type: 2}
+  characterName: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  material: {fileID: 0}
   attackedCharacters: []
   startAreaPoints: 45
   startAreaRadius: 3
@@ -897,7 +901,6 @@ MonoBehaviour:
   trail: {fileID: 0}
   trailCollidersHolder: {fileID: 0}
   trailColls: []
-  positionsTillReturning: 2
 --- !u!4 &735162576
 Transform:
   m_ObjectHideFlags: 0
@@ -968,8 +971,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1196,7 +1197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833e3a9fc595a6e43af1b1743158603a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2126999029}
 --- !u!1 &1096956729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1096956729}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1252,8 +1252,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1263,6 +1261,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1096956732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1319,7 +1318,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1361325320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1328,8 +1327,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1339,6 +1336,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1361325323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1356,7 +1354,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1361325320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1401,8 +1399,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1389785588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1474,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1507,13 +1504,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389785588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 516c33a5299798d418f550c7a6293f83, type: 3}
+  m_Script: {fileID: 11500000, guid: 407ac5972f35f9041b0c5f083d3de468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  characterName: Rob
-  color: {r: 0.6543646, g: 0.1529412, b: 0.98039216, a: 1}
-  material: {fileID: 2100000, guid: ae1cf6cc177952f41b63cb3a353956a4, type: 2}
+  characterName: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  material: {fileID: 0}
   attackedCharacters: []
   startAreaPoints: 45
   startAreaRadius: 3
@@ -1527,7 +1524,6 @@ MonoBehaviour:
   trail: {fileID: 0}
   trailCollidersHolder: {fileID: 0}
   trailColls: []
-  positionsTillReturning: 2
 --- !u!4 &1389785594
 Transform:
   m_ObjectHideFlags: 0
@@ -1618,6 +1614,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1647,13 +1644,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1430366946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 516c33a5299798d418f550c7a6293f83, type: 3}
+  m_Script: {fileID: 11500000, guid: 407ac5972f35f9041b0c5f083d3de468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  characterName: Bob
-  color: {r: 0.1527234, g: 0.84457463, b: 0.9811321, a: 1}
-  material: {fileID: 2100000, guid: ae1cf6cc177952f41b63cb3a353956a4, type: 2}
+  characterName: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  material: {fileID: 0}
   attackedCharacters: []
   startAreaPoints: 45
   startAreaRadius: 3
@@ -1667,7 +1664,6 @@ MonoBehaviour:
   trail: {fileID: 0}
   trailCollidersHolder: {fileID: 0}
   trailColls: []
-  positionsTillReturning: 2
 --- !u!4 &1430366952
 Transform:
   m_ObjectHideFlags: 0
@@ -1710,7 +1706,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1679058329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
@@ -1729,7 +1725,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1679058329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
@@ -1872,8 +1868,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Game Over
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2032,6 +2026,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2123,6 +2118,7 @@ TrailRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2249,6 +2245,7 @@ TrailRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2347,7 +2344,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095700251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -2364,7 +2361,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095700251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -2427,7 +2424,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095700251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f12d679553919ce48b138612ccbb8a87, type: 3}
+  m_Script: {fileID: 11500000, guid: 355ee07fc0684d64f8ad26bd13841367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 1776491289}
@@ -2506,6 +2503,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2535,12 +2533,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2126999023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93153cc6b413ad14cb2200fe8e47e2c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b8399785d2954b74d9bb3e13b9de276b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  characterName: FlopCoat
-  color: {r: 0.9647059, g: 0.68235296, b: 0.09803922, a: 1}
+  characterName: Lobdo
+  color: {r: 1, g: 0.79205453, b: 0, a: 0}
   material: {fileID: 2100000, guid: ae1cf6cc177952f41b63cb3a353956a4, type: 2}
   attackedCharacters: []
   startAreaPoints: 45
